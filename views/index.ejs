@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fruit Index</title>
+    <link rel="stylesheet" href="/css/app.css">    
+  </head>
+  <body>
+    <h1>Fruits index page</h1>
+
+<a href="/products/new">Add a new product</a>
+                    <ul>
+                        <% for (const product of products.entries()) 
+                            {%>
+                                <li>
+                                    <%= product.name %>
+                                    <%= product.img %>
+                                    <%= product.price %>
+                                  </li>
+                            <%} 
+                        %>
+                   </ul>
+  </body>
+</html>
+
+
+
+
+

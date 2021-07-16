@@ -19,7 +19,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
 const methodOverride = require("method-override");
-// const Products = require("./models/products");
+const Products = require("./models/products");
 const mongoose = require("mongoose");
 
 // CONFIG
@@ -35,7 +35,10 @@ mongoose.connect("mongodb://localhost:27017/productstore", {
 
 // INDEX ROUTE
 app.get("/products", (req, res) => {
-    res.send("Index is working");
+   // res.send("Index is working");
+   Products.find({}, (error, products) => {
+        res.render("index", {products});
+      });
   });
 
 // LISTENING
