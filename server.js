@@ -19,7 +19,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
 const methodOverride = require("method-override");
-const Products = require("./models/products");
+const Products = require("./models/product");
 const mongoose = require("mongoose");
 
 // CONFIG
@@ -39,6 +39,37 @@ app.get("/products", (req, res) => {
    Products.find({}, (error, products) => {
         res.render("index", {products});
       });
+  });
+
+// SEED ROUTE
+app.get('/products/seed', (req,res) => {
+    Products.remove({},(error,products) => {
+        Products.create([
+        {
+          name: "Beans",
+          description: "A small pile of beans. Buy more beans for a big pile of beans.",
+          img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
+          price: 5,
+          qty: 99
+        },
+        {
+            name: 'Bones',
+            description: 'It\'s just a bag of bones.',
+            img: 'http://bluelips.com/prod_images_large/bones1.jpg',
+            price: 25,
+            qty: 0
+          }, {
+            name: 'Bins',
+            description: 'A stack of colorful bins for your beans and bones.',
+            img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
+            price: 7000,
+            qty: 1
+          }
+      ],(error,products) => {
+        res.redirect("/products");
+      }
+      )
+    })
   });
 
 // LISTENING
