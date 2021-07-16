@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/app.css">    
+    <title>New Product</title>
+  </head>
+  <body>
+    <h1>New Product Page</h1>
+    <a href='/products'>Back to Products Index</a>
+    <form action="/products" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+      <label for="description">Description</label>
+      <input type="text" name="description" id="description" />
+      <label for="img">Image</label>
+      <input type="text" name="img" id="img" />
+      <label for="price">Price</label>
+      <input type="text" name="price" id="price" />
+      <label for="qty">Quantity</label>
+      <input type="text" name="qty" id="qty" />
+      <input type="submit" value="Create Product" />
+    </form>
+  </body>
+</html>

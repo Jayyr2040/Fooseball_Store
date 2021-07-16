@@ -72,6 +72,20 @@ app.get('/products/seed', (req,res) => {
     })
   });
 
+// POST - CREATE NEW PRODUCT
+app.post("/products", (req, res) => {
+    Products.create(req.body, (error, createdProduct) => {
+      console.log("Created Product", createdProduct);
+      res.redirect("/products");
+    });
+  });
+
+// NEW ROUTE
+app.get("/products/new", (req, res) => {
+    res.render("new");
+  });
+  
+
 // SHOW ROUTE
 app.get("/products/:id", (req, res) => {
     const pos = req.params.id;
