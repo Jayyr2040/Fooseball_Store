@@ -94,6 +94,25 @@ app.get("/products/:id", (req, res) => {
     })
   });
 
+// UPDATE - EDIT ROUTE
+app.put('/products/:id', (req, res) => {
+    const pos  = req.params.id; 
+    const product = {...req.body}
+    Products.findByIdAndUpdate(pos,product,{new:true},(err,product) => {
+      res.redirect("/products");
+     }
+     )
+     });
+
+//// SHOW EDIT form
+app.get('/products/:id/edit', (req, res) => {
+    const pos = req.params.id;
+    Products.findById(pos,(error,product) => {
+      res.render("edit",{data: product, pos: pos})
+    }
+    )
+    });
+    
 // LISTENING
 app.listen(PORT, () => {
     console.log("Mongoose Store running on port: ", PORT);

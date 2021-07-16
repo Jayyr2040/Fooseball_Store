@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/app.css">    
+    <title>Edit Products</title>
+</head>
+<body>
+    <h1>Edit Products</h1>
+    <form action="/products/<%=pos%>?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%=data.name%>"/>
+      <label for="description">Description</label>
+      <input type="text" name="description" id="description" value="<%=data.description%>" />
+      <label for="img">Image</label>
+      <input type="text" name="img" id="img" value="<%=data.img%>"/>
+      <label for="price">Price</label>
+      <input type="text" name="price" id="price" value="<%=data.price%>"/>
+      <label for="qty">Quantity</label>
+      <input type="text" name="qty" id="qty" value="<%=data.qty%>"/>
+        <input type="submit" value="Edit Product" />
+      </form>
+      <button><a href='/products'>Back to Menu</a></button>
+      <button><a href='/products/<%=pos%>'>Back to Pokemon</a></button>
+
+</body>
+</html>
