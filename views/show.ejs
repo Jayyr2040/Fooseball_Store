@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/app.css">    
+    <title>Product Show</title>
+  </head>
+  <body>
+    <h1>Product show</h1>
+    <a href='/products'>Back to Products Index</a>
+    <%= data.name %>
+    <p>
+      <img src='<%= data.img %>' alt="" width="100px" height="100px">
+      <%= data.description %>
+
+    <% if (data.qty === 0) 
+    {%>
+        OUT OF STOCK 
+    <%} else 
+    {%>
+        <%= data.qty %> remaining
+        <button>BUY</button>
+    <%}
+    %>
+
+    </p>
+    <a href='/products/<%=pos%>/edit'>Edit</a>
+    <form action='/products/<%=pos%>?_method=DELETE' method='POST'>
+      <button>Delete</button>
+    </form>
+  </body>
+</html>
+

@@ -10,12 +10,12 @@
 
 <a href="/products/new">Add a new product</a>
                     <ul>
-                        <% for (const product of products) 
+                        <% for (const item of data) 
                             {%>
                                 <li>
-                                    <%= product.name %>
-                                    <img src='<%= product.img %>' alt="" width="100px" height="100px">
-                                    Price: $<%= product.price %>
+                                    <a href="/products/<%= item.id%>"><%= item.name %></a>
+                                    <img src='<%= item.img %>' alt="" width="100px" height="100px">
+                                    Price: $<%= item.price %>
                                   </li>
                             <%} 
                         %>

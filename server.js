@@ -37,7 +37,7 @@ mongoose.connect("mongodb://localhost:27017/productstore", {
 app.get("/products", (req, res) => {
    // res.send("Index is working");
    Products.find({}, (error, products) => {
-        res.render("index", {products});
+        res.render("index", {data: products});
       });
   });
 
@@ -69,6 +69,14 @@ app.get('/products/seed', (req,res) => {
         res.redirect("/products");
       }
       )
+    })
+  });
+
+// SHOW ROUTE
+app.get("/products/:id", (req, res) => {
+    const pos = req.params.id;
+    Products.findById(pos, (error,product) => {
+     res.render("show",{data: product, pos: pos});
     })
   });
 
