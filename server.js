@@ -99,7 +99,7 @@ app.put('/products/:id', (req, res) => {
     const pos  = req.params.id; 
     const product = {...req.body}
     Products.findByIdAndUpdate(pos,product,{new:true},(err,product) => {
-      res.render("show",{data: product, pos: pos});
+      res.render("show",{data: product, pos: pos}); 
      }
      )
      });

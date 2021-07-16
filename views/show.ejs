@@ -19,7 +19,9 @@
     <%} else 
     {%>
         <%= data.qty %> remaining
-        <button>BUY</button>
+        <form action="/products/<%=pos%>?_method=PUT" method="POST">
+        <button name="qty" value="<%=data.qty-1%>" >BUY</button>
+        </form>
     <%}
     %>
 
