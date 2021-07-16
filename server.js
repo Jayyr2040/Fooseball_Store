@@ -13,27 +13,32 @@ in server.js set up file, in package.json, edit "start": "nodemon server.js"
 open up mongo compass to have a visual on the database, connect using url after connecting
 */
 
-// Dependecy
+// DEPENDENCY
 require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
 const methodOverride = require("method-override");
-// const Pokemon = require("./models/pokemon");
+// const Products = require("./models/products");
 const mongoose = require("mongoose");
 
-// Config
+// CONFIG
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.static('public'));
 app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
+mongoose.connect("mongodb://localhost:27017/productstore", {
+  useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false
+},() => {
+  console.log("the connection with mongod is established");
+});
 
-// INDEX route
+// INDEX ROUTE
 app.get("/products", (req, res) => {
     res.send("Index is working");
   });
 
-// Listening
+// LISTENING
 app.listen(PORT, () => {
     console.log("Mongoose Store running on port: ", PORT);
   });
