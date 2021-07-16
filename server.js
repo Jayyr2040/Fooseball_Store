@@ -72,7 +72,7 @@ app.get('/products/seed', (req,res) => {
     })
   });
 
-// POST - CREATE NEW PRODUCT
+// CREATE NEW PRODUCT
 app.post("/products", (req, res) => {
     Products.create(req.body, (error, createdProduct) => {
       console.log("Created Product", createdProduct);
@@ -99,7 +99,7 @@ app.put('/products/:id', (req, res) => {
     const pos  = req.params.id; 
     const product = {...req.body}
     Products.findByIdAndUpdate(pos,product,{new:true},(err,product) => {
-      res.redirect("/products");
+      res.render("show",{data: product, pos: pos});
      }
      )
      });
@@ -112,6 +112,15 @@ app.get('/products/:id/edit', (req, res) => {
     }
     )
     });
+
+//// DELETE ROUTE
+app.delete('/products/:id', (req, res) => {
+    const pos = req.params.id;
+    Products.findByIdAndRemove(pos, (err,fruit) => {
+          res.redirect("/products");
+        }
+          )
+       });
     
 // LISTENING
 app.listen(PORT, () => {
