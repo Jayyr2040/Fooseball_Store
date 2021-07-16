@@ -2,12 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/app.css">    
+    <link rel="stylesheet" href="/style.css">       
     <title>New Product</title>
   </head>
   <body>
-    <h1>New Product Page</h1>
-    <a href='/products'>Back to Products Index</a>
+    <div style="display:flex;height:80px">
+      <div style="width:20%">
+    <h1>Add New Product</h1>
+  </div>
+  <div style="width:10%">
+    <button style="height:40px"><a href='/products'>Back to Products Index</a></button>
+  </div>
+  </div>
+  <div>
     <form action="/products" method="POST">
       <label for="name">Name</label>
       <input type="text" name="name" id="name" />
@@ -21,5 +28,6 @@
       <input type="text" name="qty" id="qty" />
       <input type="submit" value="Create Product" />
     </form>
+  </div>
   </body>
 </html>

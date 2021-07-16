@@ -3,23 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <title>Mongoose Store</title>
-    <link rel="stylesheet" href="/css/app.css">    
+    <link rel="stylesheet" href="/style.css">    
   </head>
   <body>
     <h1>Mongoose Store</h1>
 
-<a href="/products/new">Add a new product</a>
-                    <ul>
+<button><a href="/products/new">Add a new product</a></button>
+<div class="fhighlights7">              
                         <% for (const item of data) 
                             {%>
-                                <li>
-                                    <a href="/products/<%= item.id%>"><%= item.name %></a>
-                                    <img src='<%= item.img %>' alt="" width="100px" height="100px">
-                                    Price: $<%= item.price %>
-                                  </li>
+                                <a href="/products/<%= item.id%>">
+                                <div class="borderOrange fhighlights1">
+                                    <div class="fhighlights3">
+                                        <div class="fhighlights4">
+                                            <img src='<%= item.img %>' alt="" width="200px" height="auto">
+                                        </div>  
+                                    </div>
+                                    <div class="fhighlights2">
+                                        <%= item.name %>
+                                        Price: $<%= item.price %>
+                                    </div>
+                                </div>
+                            </a>
                             <%} 
                         %>
-                   </ul>
+</div>      
   </body>
 </html>
 

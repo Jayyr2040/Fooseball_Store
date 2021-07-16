@@ -2,17 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/app.css">    
-    <title>Product Show</title>
+    <link rel="stylesheet" href="/style.css">      
+    <title>Product Details</title>
   </head>
-  <body>
-    <h1>Product show</h1>
-    <a href='/products'>Back to Products Index</a>
+  <body class="PD">
+    <h1>Product Details</h1>
+    
+    <button><a href='/products'>Back to Products Index</a></button>
+    <div >
+    <div style="color:white">
     <%= data.name %>
-    <p>
-      <img src='<%= data.img %>' alt="" width="100px" height="100px">
+  </div>
+  <div >
+      <img src='<%= data.img %>' alt="" width="300px" height="auto">
+    </div>
+    <div style="color:white">
       <%= data.description %>
-
+    </div>
+    <div style="color:white">
     <% if (data.qty === 0) 
     {%>
         OUT OF STOCK 
@@ -24,12 +31,16 @@
         </form>
     <%}
     %>
+      </div>
+    
 
-    </p>
-    <a href='/products/<%=pos%>/edit'>Edit</a>
+      <div class="row-start-1 col-start-2 col-span-2">
+    <button><a href='/products/<%=pos%>/edit'>Edit</a></button>
     <form action='/products/<%=pos%>?_method=DELETE' method='POST'>
       <button>Delete</button>
     </form>
+  </div>
+</div>
   </body>
 </html>
 

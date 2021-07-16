@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/app.css">    
+    <link rel="stylesheet" href="/style.css">    
     <title>Edit Products</title>
 </head>
 <body>
@@ -20,8 +20,9 @@
       <input type="text" name="qty" id="qty" value="<%=data.qty%>"/>
         <input type="submit" value="Edit Product" />
       </form>
+      <span class="fnew3"></span>
       <button><a href='/products'>Back to Menu</a></button>
-      <button><a href='/products/<%=pos%>'>Back to Pokemon</a></button>
+      <button><a href='/products/<%=pos%>'>Back to <%=data.name%></a></button>
 
 </body>
 </html>

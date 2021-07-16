@@ -1,0 +1,60 @@
+body {
+    background-image: url('https://devportos.wpengine.com/wp-content/uploads/2018/04/portos-web-2-200346-1-876x688.jpg');
+    background-size:100vw;    
+}
+
+h1, p,  ul,h3 {
+    color: white
+}
+
+button {
+    color:black
+}
+
+.fhighlights7 {
+    flex-flow: row wrap;
+    display: flex;
+    align-items: stretch; 
+    align-content: space-between;
+    justify-content: center
+  }
+
+.fhighlights1 {
+    width:200px;
+    height:250px; 
+    margin:5px; 
+    cursor:pointer;
+    border-radius:10px
+  }
+
+
+  .fhighlights2 {
+    background-color: white;
+    height:10%; 
+    color:black
+  }
+  
+  .fhighlights3 {
+    height:90%; 
+  }
+  
+  .fhighlights4 {
+
+    border-radius:10px; 
+    height:100%
+  }
+
+  .borderOrange {
+    border: 2px solid orange
+  }
+  
+  .PD {
+      text-align: center;
+  }
+
+  .fnews3 {
+    display: block;
+    margin-bottom: 50px
+  }
+  
+
