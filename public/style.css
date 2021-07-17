@@ -1,15 +1,13 @@
 body {
-    background-image: url('https://devportos.wpengine.com/wp-content/uploads/2018/04/portos-web-2-200346-1-876x688.jpg');
+    background-image: url('https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/d7/89.jpg');
     background-size:100vw;    
 }
 
-h1, p,  ul,h3 {
-    color: white
+h1, p, h3 {
+    color:goldenrod
 }
 
-button {
-    color:black
-}
+
 
 .fhighlights7 {
     flex-flow: row wrap;
@@ -30,12 +28,13 @@ button {
 
   .fhighlights2 {
     background-color: white;
-    height:10%; 
-    color:black
+    height:20%; 
+    color:black;
+    font-size: 12px;
   }
   
   .fhighlights3 {
-    height:90%; 
+    height:80%; 
   }
   
   .fhighlights4 {
@@ -53,8 +52,57 @@ button {
   }
 
   .fnews3 {
-    display: block;
-    margin-bottom: 50px
+    display: inline-block;
+    width: 100px
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 65px;
+    border : 30px solid transparent; /*g*/
+    box-sizing: border-box;/*g*/
+    box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%), 0px 2px 4px -1px rgb(0 0 0 / 20%);/*g*/
+    line-height: 27px;/*g*/
+    font-family: Roboto, RobotoDraft, Arial, sans-serif;/*g*/
+    background-color:#242424;
+    color: goldenrod
+  }
+
+  .nav a {
+    text-decoration: none;
+    color:goldenrod;
+    font-weight: bold;
+    font-size: 30x;
+  }
+  .nav > * {
+    padding-right: 30px;
+    
+  }
+
+  a {
+    text-decoration: none;
+    color: goldenrod
   }
   
+  .indexhead1{
+    position:absolute; right:0;
+    font-size: 16px;
+  }
+ 
+label {
+  color: goldenrod
+}
 
+.btn {
+  color: goldenrod
+}
+
+.out {
+  background-color: red;
+}
+
+.in {
+  background-color: green;
+}

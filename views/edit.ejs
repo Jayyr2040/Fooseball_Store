@@ -2,11 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">    
     <title>Edit Products</title>
 </head>
 <body>
+  <div class="nav">
+    <div>
     <h1>Edit Products</h1>
+  </div>
+  <div>
+  <a href='/products' class="indexhead1">Back to Home</a>
+  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
     <form action="/products/<%=pos%>?_method=PUT" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" value="<%=data.name%>"/>
@@ -18,11 +30,10 @@
       <input type="text" name="price" id="price" value="<%=data.price%>"/>
       <label for="qty">Quantity</label>
       <input type="text" name="qty" id="qty" value="<%=data.qty%>"/>
-        <input type="submit" value="Edit Product" />
+        <input class="btn btn-primary" type="submit" value="Edit" />
       </form>
-      <span class="fnew3"></span>
-      <button><a href='/products'>Back to Menu</a></button>
-      <button><a href='/products/<%=pos%>'>Back to <%=data.name%></a></button>
+      </div>
+    
 
 </body>
 </html>
