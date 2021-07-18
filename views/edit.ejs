@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">    
+    <%- include('./partials/head'); %>  
     <title>Edit Products</title>
 </head>
 <body>
   <div class="nav">
-    <div>
-    <h1>Edit Products</h1>
-  </div>
-  <div>
-  <a href='/products' class="indexhead1">Back to Home</a>
-  </div>
+        <div>
+            <h1>Edit Products</h1>
+        </div>
+        <div>
+          <a href='/products' class="indexhead1"><i class="bi bi-house-fill"></i> Home</a>
+            <a href="/products/customer" class="indexhead2"><i class="bi bi-bag-fill"></i> Cart</a>
+      </div>
   </div>
   <br>
   <br>
@@ -22,17 +21,17 @@
     <form action="/products/<%=pos%>?_method=PUT" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" value="<%=data.name%>"/>
-      <label for="description">Description</label>
-      <input type="text" name="description" id="description" value="<%=data.description%>" />
-      <label for="img">Image</label>
-      <input type="text" name="img" id="img" value="<%=data.img%>"/>
-      <label for="price">Price</label>
-      <input type="text" name="price" id="price" value="<%=data.price%>"/>
-      <label for="qty">Quantity</label>
-      <input type="text" name="qty" id="qty" value="<%=data.qty%>"/>
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" value="<%=data.description%>" />
+        <label for="img">Image</label>
+        <input type="text" name="img" id="img" value="<%=data.img%>"/>
+        <label for="price">Price</label>
+        <input type="text" name="price" id="price" value="<%=data.price%>"/>
+        <label for="qty">Quantity</label>
+        <input type="text" name="qty" id="qty" value="<%=data.qty%>"/>
         <input class="btn btn-primary" type="submit" value="Edit" />
       </form>
-      </div>
+  </div>
     
 
 </body>

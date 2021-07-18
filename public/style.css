@@ -3,7 +3,7 @@ body {
     background-size:100vw;    
 }
 
-h1, p, h3 {
+h1, p, h3, h2,h4,ol {
     color:goldenrod
 }
 
@@ -19,7 +19,7 @@ h1, p, h3 {
 
 .fhighlights1 {
     width:200px;
-    height:250px; 
+    height:260px; 
     margin:5px; 
     cursor:pointer;
     border-radius:10px
@@ -28,13 +28,13 @@ h1, p, h3 {
 
   .fhighlights2 {
     background-color: white;
-    height:20%; 
+    height:25%; 
     color:black;
     font-size: 12px;
   }
   
   .fhighlights3 {
-    height:80%; 
+    height:75%; 
   }
   
   .fhighlights4 {
@@ -44,7 +44,7 @@ h1, p, h3 {
   }
 
   .borderOrange {
-    border: 2px solid orange
+    border: 2px solid goldenrod
   }
   
   .PD {
@@ -87,10 +87,16 @@ h1, p, h3 {
   }
   
   .indexhead1{
-    position:absolute; right:0;
+    position:absolute; right:8px;
     font-size: 16px;
   }
  
+ 
+  .indexhead2{
+    position:absolute; top:0; right:20px;
+    font-size: 16px;
+  }
+
 label {
   color: goldenrod
 }
@@ -105,4 +111,17 @@ label {
 
 .in {
   background-color: green;
+}
+
+.cartContent {
+  text-align: center;
+  background-color: #242424 ;
+  margin-left: auto;
+  margin-right: auto;
+  width:500px;
+  height:auto;
+}
+
+li {
+  text-align: left;
 }
